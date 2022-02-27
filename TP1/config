@@ -1,0 +1,4 @@
+Dao.DaoImplDB
+Metier.MetierImpl1
+
+specify which class to inject in the two first lines
