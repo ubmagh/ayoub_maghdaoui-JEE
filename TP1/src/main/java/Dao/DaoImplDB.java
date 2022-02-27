@@ -3,7 +3,7 @@ package Dao;
 /*
     first implementation of IDao, supposing it gets data from a DataBase :/
 */
-public class IDaoImplDB implements IDao{
+public class DaoImplDB implements IDao{
 
     @Override
     public double getData() {
