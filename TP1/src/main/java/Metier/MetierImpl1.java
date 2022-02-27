@@ -10,4 +10,8 @@ public class MetierImpl1 implements IMetier {
     public double calculate() {
         return dao.getData() + Math.random(); // :D
     }
+
+    public void setDao(IDao dao) {
+        this.dao = dao;
+    }
 }
