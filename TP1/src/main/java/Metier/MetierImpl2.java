@@ -1,5 +1,4 @@
 package Metier;
-
 import Dao.IDao;
 
 public class MetierImpl2 implements IMetier {
@@ -7,7 +6,6 @@ public class MetierImpl2 implements IMetier {
     IDao dao;
 
     MetierImpl2(){
-
     }
 
     public MetierImpl2(IDao dao) {
