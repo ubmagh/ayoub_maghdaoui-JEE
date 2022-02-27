@@ -3,7 +3,11 @@
 # TP1: injection des dépendences
 
 - différentes méthodes pour faire l'injection des dépendences.
-- en général l'injection se fait soit par les annotations ou en spécifiant les classes à injecter dans le fichier  `src/main/resources/ApplicationContext.xml`.
+  - static avec le mot clé `new`
+  - par une instanciation dynamique en utilisant un fichier de configuration, ici le fichier texte `config`
+  - en utilisant le framework spring :
+    - les annotations + autowiring
+    - le fichier des dépendences `ApplicationContext.xml` 
 - implémentation du principe de l'ouverture à la modification et l'ouverture à l'extension.
 
 
