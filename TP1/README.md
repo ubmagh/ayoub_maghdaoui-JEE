@@ -135,13 +135,3 @@
 
   
 <hr>
-<hr>
-
-<style>
-  .img{
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border : 1px solid greenyellow;
-  }
-</style>
