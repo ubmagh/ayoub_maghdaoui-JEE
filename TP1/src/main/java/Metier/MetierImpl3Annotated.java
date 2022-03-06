@@ -17,7 +17,4 @@ public class MetierImpl3Annotated implements IMetier {
         return dao.getData() * Math.random(); // 2nd :D
     }
 
-    public void setDao(IDao dao) {
-        this.dao = dao;
-    }
 }
