@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ubeans >
+
+    <!-- use this dao -->
+    <ubean id="dao" class="TestApp.Dao.DaoClassPI"></ubean>
+
+    <!-- DI. with property injection -->
+    <ubean id="metier" class="TestApp.Metier.BusinessLogicClassPI">
+        <!-- to use this one make sure there is a setter of this field in your class 👆 -->
+        <uproperty name="dao" ref="dao">
+        </uproperty>
+    </ubean>
+
+</ubeans>

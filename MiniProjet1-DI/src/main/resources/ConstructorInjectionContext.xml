@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ubeans >
+
+    <!--
+    xmlns="xml"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="ubeans.xsd"
+       -->
+
+    <!-- use this dao -->
+    <ubean id="dao" class="TestApp.Dao.DaoClassCI"></ubean>
+
+
+    <!-- DI. with constructor injection -->
+    <ubean id="metier" class="TestApp.Metier.BusinessLogicClassCI">
+        <uconstructor-arg ref="dao" name="dao">
+        </uconstructor-arg>
+    </ubean>
+
+</ubeans>
