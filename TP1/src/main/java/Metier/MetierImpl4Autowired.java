@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 public class MetierImpl4Autowired implements IMetier {
 
 
-    // Directly in the property (uncomment following line)
-    // @Autowired
-    IDao dao;
+    // Directly in the property (uncomment following line) you won't need constuctor
+    //@Autowired
+    private IDao dao;
 
     // or throught setter
     @Autowired
