@@ -1,5 +1,7 @@
-[ :arrow_backward: liste des tps ](https://github.com/ubmagh/ayoub_maghdaoui-JEE "Go back")
 
+### [ :arrow_backward: liste des tps ](https://github.com/ubmagh/ayoub_maghdaoui-JEE "Go back")
+<br>
+  
 # TP1: injection des dépendances
 
 - différentes méthodes pour faire l'injection des dépendances.
@@ -11,58 +13,64 @@
 - implémentation du principe de l'ouverture à la modification et l'ouverture à l'extension.
 
 
-# Ennoncé 
-
+### Ennoncé 
 
 <img src="./imgs/ennoncé.png"  class="img" />
 
 
 
+<br/>
 
 # Comtpe Rendu 
 
-## 1- Créer l'interface IDAO
+<br/>
+
+### 1- Créer l'interface IDAO
 
 <img src="./imgs/img1.png"  class="img" />
 
 
 
+<br/>
 
-## 2- Implémenter l'interface IDAO
+### 2- Implémenter l'interface IDAO
 
 
 <img src="./imgs/img2.png"  class="img" />
 
 
 
+<br/>
 
-## 3- Créer l'interface IMetier 
+### 3- Créer l'interface IMetier 
 
 
 <img src="./imgs/img3.png"  class="img" />
 
 
 
+<br/>
 
-## 4- Implémenter l'interface IMetier 
+### 4- Implémenter l'interface IMetier 
 
 <img src="./imgs/img4.png"  class="img" />
 
 
 
+<br/>
 
+### 5- Faire l'injection des dépendances
 
-## 5- Faire l'injection des dépendances
-
-### a- Par instanciation statique :
+#### a- Par instanciation statique :
 
 
 - Utilisation du mot clé ‘new’
   <img src="./imgs/img5.png"  class="img" />
 
 
+<br/>
 
-### b- Par instanciation dynamique :
+#### b- Par instanciation dynamique :
 
 
 - Je fourni un fichier texte pour les classes à utiliser
@@ -73,8 +81,9 @@
   <img src="./imgs/img7.png"  class="img" />
 
 
+<br/>
 
-### c- Injection en utilisant le framework Spring :
+#### c- Injection en utilisant le framework Spring :
 
 
 - J’ai installé les dépendances nécessaires de Maven : spring-context & spring-beans
@@ -83,8 +92,8 @@
 
 
 
-
-#### Version XML :
+<br/><br/>
+##### Version XML :
 
 
 - Dans la classe main, j’ai importé le fichier ApplicationContexte.xml qui contient les classes à utiliser et j’ai lancé la fonction metier.calculate()
@@ -102,9 +111,9 @@
 
 
 
+<br/>
 
-
-#### Version Annotation :
+##### Version Annotation :
 
 
 - J’ai créé une autre implémentation de l’interface Dao, et je l’ai décoré avec l’annotation Component un nom  ‘dao’
@@ -121,8 +130,9 @@
 
 
 
+<br/>
 
-#### Version AutoWiring :
+##### Version AutoWiring :
 
 
 - Pour faire l’autowiring, j’ai créé une autre implémentation de l’interface Metier, qui va avoir l’attribut ‘dao’ décoré par @Autowired
