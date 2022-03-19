@@ -114,15 +114,19 @@ Notez qu'il faut traviller soit avec MySQL soit avec la BD en mémoire H2, j'ai 
 * Voici les enregistrements insérés dans la BD, visualisés avec Navicat :
 
     - La table des patients :
+      
       <img src="./imgs/15.png" width="400">
 
     - La table des medecins :
+      
       <img src="./imgs/16.png" width="400">
 
     - La table des rendezVous :
+      
       <img src="./imgs/17.png" width="400">
 
     - La table des consultations :
+      
       <img src="./imgs/18.png" width="400">
 
 
