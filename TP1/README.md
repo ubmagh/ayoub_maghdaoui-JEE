@@ -116,7 +116,7 @@
 ##### Version Annotation :
 
 
-- J’ai créé une autre implémentation de l’interface Dao, et je l’ai décoré avec l’annotation Component un nom  ‘dao’
+- J’ai créé une autre implémentation de l’interface Dao, et je l’ai décoré avec l’annotation Component avec un nom  ‘dao’
   <img src="./imgs/img12.png"  class="img" />
 
 
