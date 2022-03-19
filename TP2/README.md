@@ -8,7 +8,7 @@
 
 ### Ennoncé 
 
-<img src="./assets/enoncé.png"  class="img" />
+<img src="./assets/enoncé.png"  class="img" width="700" />
 
 
 
@@ -25,5 +25,7 @@
 ### [:closed_lock_with_key: UsersRoles App](https://github.com/ubmagh/ayoub_maghdaoui-JEE/tree/main/TP2/Users%20and%20Roles%20-ManyToMany "HospitalApp")
 
 -> cette deuxième application est un example pour l'association ManyToMany entre les entités user & role.
+
+<br/>
 
 <hr/>
