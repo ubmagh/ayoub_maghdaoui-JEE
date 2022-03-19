@@ -3,6 +3,7 @@ package me.ubmagh.usersroles.services;
 import me.ubmagh.usersroles.entities.Role;
 import me.ubmagh.usersroles.entities.User;
 
+// services.UserService
 public interface UserService {
 
     User addNewUser(User user);

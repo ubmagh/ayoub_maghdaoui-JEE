@@ -17,24 +17,13 @@ public class JpaApplication {
     @Autowired
     private UserService userService;
 
-    public static void main(String[] args) {
-
-        SpringApplication.run(JpaApplication.class, args);
-    }
-
-    /*
-    @Bean
-    PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
-     */
+    public static void main(String[] args) { SpringApplication.run(JpaApplication.class, args); }
 
     @Bean
     public CommandLineRunner Start(){
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
-
 
                 User u1 = new User();
                 u1.setUsername("ayoub");
@@ -81,4 +70,13 @@ public class JpaApplication {
         or create a function with @Bean that returns CommandeLine Runner
 
      */
+
+
+    /*
+    @Bean
+    PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+     */
+
 }

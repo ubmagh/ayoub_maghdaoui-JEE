@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.UUID;
 
+// services.UserServiceImpl
 @Service
 @Transactional
 @AllArgsConstructor
@@ -19,7 +20,6 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     private RoleRepository roleRepository;
-
 
     // using constructor injection cuz @Autowired is not recommended
     /* // Define One single constructor with params to enable injection in constructor
