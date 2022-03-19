@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.UUID;
 
+// services.IHospitalServiceImpl
 @Service
 @Transactional
 @AllArgsConstructor
@@ -24,12 +25,7 @@ public class IHospitalServiceImpl implements IHospitalService {
     ConsultationRepository consultationRepository;
     RendezVousRepository rendezVousRepository;
 
-
-    /*
-
-        in this service we  could place business logic like checking if 'medecin' is available ....
-
-     */
+    /* in this service we  could place business logic like checking if 'medecin' is available ....  */
 
     @Override
     public Patient savePatient(Patient patient) {
@@ -48,7 +44,5 @@ public class IHospitalServiceImpl implements IHospitalService {
     }
 
     @Override
-    public Consultation saveConsultation(Consultation consultation) {
-        return consultationRepository.save(consultation);
-    }
+    public Consultation saveConsultation(Consultation consultation) { return consultationRepository.save(consultation); }
 }

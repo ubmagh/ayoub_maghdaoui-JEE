@@ -22,7 +22,6 @@ public class SpringDataAppApplication {
 
     @Autowired
     private PatientRepository patientRepository;
-
     public static void main(String[] args) {
         SpringApplication.run(me.ubmagh.hospital.SpringDataAppApplication.class, args);
     }
@@ -39,7 +38,6 @@ public class SpringDataAppApplication {
             IHospitalService hospitalService
         ){ // DI
         return args -> {
-
             patientRepository.save( new Patient( null, "ayoub", "Maghdaoui", new Date(), 100, false, null));
             Stream.of( "ahmed", "Najat", "Hassan").forEach(s -> {
                 Patient p = new Patient();

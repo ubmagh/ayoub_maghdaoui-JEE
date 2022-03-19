@@ -5,6 +5,7 @@ import me.ubmagh.hospital.entities.Medecin;
 import me.ubmagh.hospital.entities.Patient;
 import me.ubmagh.hospital.entities.RendezVous;
 
+// services.IHospitalService
 public interface IHospitalService {
 
     Patient savePatient( Patient patient);
@@ -14,6 +15,5 @@ public interface IHospitalService {
     RendezVous saveRdv( RendezVous rendezVous);
 
     Consultation saveConsultation( Consultation consultation);
-
 
 }

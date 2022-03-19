@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Date;
 
+
+// entities.RendezVous
 @Entity
 @Data
 @AllArgsConstructor

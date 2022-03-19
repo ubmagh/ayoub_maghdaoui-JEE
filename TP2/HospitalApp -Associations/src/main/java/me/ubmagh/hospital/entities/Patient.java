@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Date;
 
+// entities.Patient
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

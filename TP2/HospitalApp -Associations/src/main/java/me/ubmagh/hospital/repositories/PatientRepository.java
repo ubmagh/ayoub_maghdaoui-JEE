@@ -12,11 +12,11 @@ import org.springframework.stereotype.Repository;
 import java.util.Date;
 import java.util.List;
 
+// repositories.PatientRepository
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, Long> {
 
     Patient findByFname(String nom);
-
 
     public List<Patient> findBySick(Boolean m);
 
