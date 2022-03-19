@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
 
 @Data
@@ -20,10 +21,13 @@ public class Patient {
     private String fname;
     @Column(length = 100)
     private String lname;
+
     @Temporal(TemporalType.DATE)
     private Date birthDate;
     private int score;
-    private boolean bo;
+    private boolean sick;
 
+    @OneToMany(mappedBy = "patient")
+    Collection<RendezVous> rendezVous;
 
 }
