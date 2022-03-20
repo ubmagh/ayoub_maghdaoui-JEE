@@ -13,6 +13,11 @@ Après l'initialisation du projet sur l'editeur intellij avec l'outil 'Spring in
 Notez qu'il faut traviller soit avec MySQL soit avec la BD en mémoire H2, j'ai désactivé une (voir `pom.xml`).
 
 
+> pour le hashage dans ce projet, j'ai utilisé le package [at.favre.lib » bcrypt](https://mvnrepository.com/artifact/at.favre.lib/bcrypt "hi there")
+
+<img src="./imgs/4.png" width="600">
+
+
 <br>
 
 ### Création des entités : 
