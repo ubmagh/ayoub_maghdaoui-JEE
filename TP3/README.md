@@ -16,7 +16,7 @@
 
 <br/>
 
-##> initialisation du projet sur Intellij
+## initialisation du projet sur Intellij
 
 * Initialiser un projet spring Boot avec les dépendaces nécessaires.
 
@@ -103,7 +103,8 @@
 * utiliser un compteur au lieu de l'ID de l'enregistrement dans la première colonne.
 * Améliorer la pagination:
   * si il y a plusieurs page afficher juste 5
-    <img src="./assets/10.png" />
+  
+  <img src="./assets/10.png" />
   * Ajouter des boutons pour paginer rapidement 
   * sauvegarder le nombre d'enregistrement lors du pagination
 
