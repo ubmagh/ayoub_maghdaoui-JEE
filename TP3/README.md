@@ -105,6 +105,7 @@
   * si il y a plusieurs page afficher juste 5
   
   <img src="./assets/10.png" />
+  
   * Ajouter des boutons pour paginer rapidement 
   * sauvegarder le nombre d'enregistrement lors du pagination
 
