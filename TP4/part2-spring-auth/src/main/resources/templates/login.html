@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="template">
+<head>
+    <meta charset="UTF-8">
+    <title> Login </title>
+
+</head>
+<body style="background-color: beige;">
+<div layout:fragment="content" class="my-4">
+    <div class="container h-100 py-5">
+        <div class="card border border-secondary">
+            <div class="card-header text-center">
+                <h3 class="h3 mt-3 mb-4 mx-auto display-6 fw-light "><i class="fa-solid fa-list-ul"></i> Liste des
+                    patients </h3>
+            </div>
+            <div class="card-body py-4">
+                <div class="row my-1 py-2 w-100 justify-content-between">
+                    <form th:action="@{patients}" method="get" class="col-md-5 col-11">
+                        <div class="input-group w-100">
+                            <input type="text" name="keyword" placeholder="Chercher un patient...." class="form-control"
+                                   id="inputGroupSelect04" th:value="${keyword}"/>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="submit"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                            <input type="hidden" name="size" th:value="${size}">
+                            <div th:if="${#strings.length(keyword)>0}" class="input-group-append">
+                                <a class="btn btn-outline-danger" th:href="@{patients( page=0,keyword='', size=${size} )}">
+                                    <i class="fa-solid fa-times"></i> </a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-2">
+                        <select class="form-select" id="sizeSelect" th:data="@{patients( page=0, keyword=${keyword} )}"
+                                aria-label="size">
+                            <option value="5" th:selected="${size==5}">5</option>
+                            <option value="10" th:selected="${size==10}"> 10</option>
+                            <option value="25" th:selected="${size==25}">25</option>
+                            <option value="50" th:selected="${size==50}">50</option>
+                            <option value="100" th:selected="${size==100}">100</option>
+                        </select>
+                        <small class="text-muted">elements par page</small>
+                    </div>
+                </div>
+                <table class="table table-responsive text-center table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th><strong style="font-size: 1.2em;"> # </strong></th>
+                        <th> Nom</th>
+                        <th> date Naissance</th>
+                        <th> Malade ?</th>
+                        <th> score</th>
+                        <th sec:authorize="hasAuthority('ADMIN')"><strong> Actions </strong></th>
+                    </tr>
+                    </thead>
+                    <tbody th:with="count=${size}*${currentPage}+1">
+                    <tr th:each="p, stat:${patients}">
+                        <td th:text="${count+stat.index}"></td>
+                        <td th:text="${p.getNom()}"></td>
+                        <td th:text="${p.dateNaissance}"></td>
+                        <td th:text="${p.isMalade()? 'Oui':'Non'}"></td>
+                        <td th:text="${p.score}"></td>
+                        <td sec:authorize="hasAuthority('ADMIN')">
+                            <button type="button" class="btn btn-outline-danger deletePatientBtn"
+                                    th:data="@{delete(id = ${p.id}, keyword=${keyword}, page=${currentPage}, size=${size} )}">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                            <a class="btn btn-outline-info" th:href="@{edit(id=${p.id}, keyword=${keyword}, page=${currentPage}, size=${size})}" >
+                                <i class="fa-solid fa-edit"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr th:if="${ #lists.isEmpty(patients)}">
+                        <td colspan="6" class="bg-light">
+                            <i class="fa-solid fa-exclamation"></i> Aucun patient n'a été trouvé !
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

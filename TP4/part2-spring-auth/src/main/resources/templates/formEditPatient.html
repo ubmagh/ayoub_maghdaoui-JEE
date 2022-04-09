@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template">
+<head>
+    <meta charset="UTF-8">
+    <title>Créer un patient</title>
+
+</head>
+<body style="background-color: beige;">
+<div layout:fragment="content" class="my-4">
+    <div class="container h-100 py-5">
+        <div class="card border border-secondary">
+            <div class="card-header text-center">
+                <h3 class="h3 mt-3 mb-4 mx-auto display-6 fw-light ">
+                    <i class="fa-solid fa-edit"></i>
+                    Modifier un nouveau patient
+                </h3>
+            </div>
+            <form th:action="@{put(page=${page},keyword=${keyword},size=${size})}" method="post">
+                <input type="hidden" name="id" th:value="${patient.getId()}" >
+                <div class="card-body py-4">
+
+                    <div class="col-8 col-md-6 mx-auto">
+
+                        <div class="mb-3">
+                            <label for="id" class="form-label fw-bold" >ID : </label>
+                            <input type="text" readonly class="form-control text-center" id="id" th:value="${patient.getId()}" >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nom" class="form-label fw-bold" >Nom du patient : </label>
+                            <input type="text" name="nom" class="form-control" id="nom" th:value="${patient.getNom()}"
+                                   placeholder="Jhon Doe">
+                            <small class="text-danger" th:errors="${patient.nom}"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="dateNaissance" class="form-label fw-bold">Date de naissance : </label>
+                            <input type="date" name="dateNaissance" class="form-control" id="dateNaissance"
+                                   th:value="${patient.getDateNaissance()}">
+                            <small class="text-danger" th:errors="${patient.dateNaissance}"></small>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="X" name="malade" th:checked="${patient.isMalade()}"
+                                   id="malade">
+                            <label class="form-check-label fw-bold" for="malade">
+                                Malade
+                            </label>
+                            <small class="text-danger" th:errors="${patient.dateNaissance}"></small>
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="score" class="form-label fw-bold">Score du patient : </label>
+                            <input type="text" name="score" class="form-control" id="score"
+                                   th:value="${patient.getScore()}">
+                            <small class="text-danger" th:errors="${patient.score}"></small>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-outline-success my-2 py-2 px-4"> <i class="fa-solid fa-save"></i> Sauvegarder </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
