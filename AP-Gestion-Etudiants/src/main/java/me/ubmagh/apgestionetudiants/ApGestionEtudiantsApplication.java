@@ -19,7 +19,7 @@ public class ApGestionEtudiantsApplication {
 
     @Autowired
     EtudiantServiceImpl etudiantService;
-    
+
 
     public static void main(String[] args) {
         SpringApplication.run(ApGestionEtudiantsApplication.class, args);
