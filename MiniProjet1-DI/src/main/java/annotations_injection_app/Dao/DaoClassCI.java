@@ -1,4 +1,4 @@
-package TestApp.Dao;
+package annotations_injection_app.Dao;
 
 public class DaoClassCI implements IDao {
 

@@ -1,4 +1,4 @@
-package UInjectorMain.XmlUtils;
+package Injector.XmlUtils;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

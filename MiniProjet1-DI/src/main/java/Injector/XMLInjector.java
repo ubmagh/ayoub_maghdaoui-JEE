@@ -1,7 +1,7 @@
-package UInjectorMain;
+package Injector;
 
-import UInjectorMain.XmlUtils.UBean;
-import UInjectorMain.XmlUtils.UBeans;
+import Injector.XmlUtils.UBean;
+import Injector.XmlUtils.UBeans;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

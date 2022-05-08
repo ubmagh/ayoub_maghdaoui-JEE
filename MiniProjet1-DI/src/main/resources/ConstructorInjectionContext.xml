@@ -8,11 +8,11 @@
        -->
 
     <!-- use this dao -->
-    <ubean id="dao" class="TestApp.Dao.DaoClassCI"></ubean>
+    <ubean id="dao" class="xml_injection_app.Dao.DaoClassCI"></ubean>
 
 
     <!-- DI. with constructor injection -->
-    <ubean id="metier" class="TestApp.Metier.BusinessLogicClassCI">
+    <ubean id="metier" class="xml_injection_app.Metier.BusinessLogicClassCI">
         <uconstructor-arg ref="dao" name="dao">
         </uconstructor-arg>
     </ubean>

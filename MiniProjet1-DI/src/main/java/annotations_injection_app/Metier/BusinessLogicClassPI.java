@@ -1,12 +1,12 @@
-package TestApp.Metier;
+package annotations_injection_app.Metier;
 
-import TestApp.Dao.IDao;
+import annotations_injection_app.Dao.IDao;
 
-public class BusinessLogicClassCI implements IBusinessLogic {
+public class BusinessLogicClassPI implements IBusinessLogic {
 
     private IDao dao;
 
-    public BusinessLogicClassCI(IDao dao) {
+    public void setDao(IDao dao) {
         this.dao = dao;
     }
 

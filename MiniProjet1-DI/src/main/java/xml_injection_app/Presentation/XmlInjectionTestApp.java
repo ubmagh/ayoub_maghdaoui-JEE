@@ -1,7 +1,7 @@
-package TestApp.Presentation;
+package xml_injection_app.Presentation;
 
-import UInjectorMain.XMLInjector;
-import TestApp.Metier.IBusinessLogic;
+import Injector.XMLInjector;
+import xml_injection_app.Metier.IBusinessLogic;
 
 public class XmlInjectionTestApp {
 

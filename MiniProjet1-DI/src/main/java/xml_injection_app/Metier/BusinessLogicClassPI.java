@@ -1,6 +1,6 @@
-package TestApp.Metier;
+package xml_injection_app.Metier;
 
-import TestApp.Dao.IDao;
+import xml_injection_app.Dao.IDao;
 
 public class BusinessLogicClassPI implements IBusinessLogic {
 

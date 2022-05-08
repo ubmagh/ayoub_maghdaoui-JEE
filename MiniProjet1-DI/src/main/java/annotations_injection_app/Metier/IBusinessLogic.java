@@ -1,4 +1,4 @@
-package TestApp.Metier;
+package annotations_injection_app.Metier;
 
 public interface IBusinessLogic {
 
