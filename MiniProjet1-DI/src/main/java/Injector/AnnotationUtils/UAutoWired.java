@@ -1,13 +1,11 @@
-package Injector.AnnotationUtils.annotations;
+package Injector.AnnotationUtils;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-
+@Target({ ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.ANNOTATION_TYPE })
-public @interface Injectable {
-    String value() default "";
+public @interface UAutoWired {
 }

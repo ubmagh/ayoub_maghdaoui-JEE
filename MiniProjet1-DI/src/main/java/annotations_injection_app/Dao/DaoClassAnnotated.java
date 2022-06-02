@@ -1,8 +1,9 @@
 package annotations_injection_app.Dao;
 
-import Injector.AnnotationUtils.Component;
 
-@Component("dao")
+import Injector.AnnotationUtils.UComponent;
+
+@UComponent("dao")
 public class DaoClassAnnotated implements IDao {
 
     public double getData(){

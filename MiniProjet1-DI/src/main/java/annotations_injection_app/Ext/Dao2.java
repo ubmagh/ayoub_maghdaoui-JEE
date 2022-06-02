@@ -1,8 +1,8 @@
 package annotations_injection_app.Ext;
 
-import Injector.AnnotationUtils.Component;
+import Injector.AnnotationUtils.UComponent;
 
-@Component("dao2")
+@UComponent("dao2")
 public class Dao2{
 
     public double getData() {

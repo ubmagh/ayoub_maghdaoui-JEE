@@ -1,10 +1,10 @@
 package annotations_injection_app.Metier;
 
-import Injector.AnnotationUtils.Component;
+import Injector.AnnotationUtils.UComponent;
 import annotations_injection_app.Dao.IDao;
 import annotations_injection_app.Ext.Dao2;
 
-@Component("metier")
+@UComponent("metier")
 public class BusinessLogicClassAnnotated implements IBusinessLogic {
 
     private IDao dao;

@@ -31,6 +31,22 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.11</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.burningwave/core -->
+        <dependency>
+            <groupId>org.burningwave</groupId>
+            <artifactId>core</artifactId>
+            <version>12.48.0</version>
+        </dependency>
+
+
 
     </dependencies>
 </project>
